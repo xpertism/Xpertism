@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Xpertism - Premium Creative Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: "#000000",
+              "background-sec": "#0B0B0B",
+              card: "#0F1115",
+              primary: {
+                DEFAULT: "#1F7BFF", // Electric Blue
+                dark: "#0F4FA8",
+                glow: "#4DA3FF"
+              },
+              silver: {
+                light: "#D9D9D9",
+                mid: "#BFC3C8",
+                dark: "#8A8F96"
+              },
+              body: "#A1A1A1",
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              'xl': '0.75rem','lg': '0.5rem',},
+            boxShadow: {
+              'neon': '0 0 20px -5px rgba(31, 123, 255, 0.4)',
+              'card': '0 10px 30px -10px rgba(0, 0, 0, 0.7)',
+            }
+          },
+        },
+      };
+    </script>
+    
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #000000; color: #D9D9D9; }
+        .text-metallic {
+            background: linear-gradient(180deg, #FFFFFF 0%, #D9D9D9 50%, #8A8F96 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-card {
+  min-width: 380px;
+  max-width: 380px;
+  background: rgba(15, 17, 21, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.testimonial-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #D9D9D9;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testimonial-author .name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.testimonial-author .role {
+  font-size: 0.85rem;
+  color: #8A8F96;
+}
+        .bg-tech-grid {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0B0B; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="bg-black text-body min-h-screen overflow-x-hidden selection:bg-primary/30 selection:text-white">
+
+<!-- Background (visual only, no pointer events) -->
+<div class="fixed inset-0 pointer-events-none z-0">
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-[#050505] to-[#0B0B0B]"></div>
+  <div class="absolute inset-0 bg-tech-grid opacity-60"></div>
+  <div class="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]"></div>
+  <div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-primary-dark/10 rounded-full blur-[150px]"></div>
+</div>
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-6">
+
+  <div class="relative bg-[#0F1115]/80 backdrop-blur-xl border border-white/10 rounded-xl px-8 py-4 shadow-card max-w-[1200px] w-full flex items-center justify-between">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-10">
+
+      <!-- Logo -->
+      <a class="flex items-center gap-3 group shrink-0" href="#">
+        <img
+          src="https://i.ibb.co/q39T98Gr/IMG-20260106-131016.png"
+          alt="Xpertism Logo"
+          class="w-11 h-11 object-contain
+                 drop-shadow-[0_0_14px_rgba(31,123,255,0.45)]
+                 group-hover:drop-shadow-[0_0_22px_rgba(31,123,255,0.65)]
+                 transition"
+        />
+        <img
+          src="https://i.ibb.co/Lzf74zgx/IMG-20260106-132214.png"
+          alt="Xpertism Wordmark"
+          class="h-8 object-contain opacity-95"
+        />
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-silver-mid">
+        <a class="hover:text-white transition-colors" href="#services">Services</a>
+        <a class="hover:text-white transition-colors" href="#work">Our Work</a>
+        <a class="hover:text-white transition-colors" href="#team">Our Team</a>
+        <a class="hover:text-white transition-colors" href="#testimonials">Testimonials</a>
+        <a class="hover:text-white transition-colors" href="#contact">Contact</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex items-center gap-4">
+
+      <a
+        href="#contact"
+        class="hidden lg:block text-sm font-medium text-silver-mid hover:text-white transition-colors"
+      >
+        Get a Quote
+      </a>
+
+   <button
+  type="button"
+  data-open-form
+  class="hidden md:inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:shadow-neon hover:border-primary/50"
+>
+  <span class="material-icons-round text-sm">bolt</span>
+  Get Started
+</button>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden text-white">
+        <span class="material-icons-round text-2xl">menu</span>
+      </button>
+
+    </div>
+
+  </div>
+</nav>
+<!-- Mobile Menu -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-[60] hidden bg-black/80 backdrop-blur-xl"
+>
+  <!-- Close Button -->
+  <button
+    id="closeMenu"
+    class="absolute top-6 right-6 z-[70] w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white"
+    aria-label="Close menu"
+  >
+    <span class="material-icons-round text-2xl">close</span>
+  </button>
+
+  <div class="h-full flex flex-col items-center justify-center gap-8 text-lg font-semibold text-white">
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#team">Our Team</a>
+    <a href="#contact">Contact</a>
+    <a href="#testimonials">Testimonials</a>
+<a
+  href="mailto:urxpertism@gmail.com"
+  class="flex items-center gap-2 text-sm font-medium text-silver-mid hover:text-white transition-colors"
+>
+  <span class="material-icons-round text-sm text-primary">mail</span>
+  urxpertism@gmail.com
+</a>
+  </div>
+</div>
+
+<main class="relative z-10 pt-36 pb-0 container mx-auto px-4 max-w-7xl flex flex-col items-center">
+<section class="text-center max-w-5xl mx-auto mb-20 relative">
+<div class="inline-flex items-center gap-2 bg-[#0F1115] border border-white/10 rounded-lg px-4 py-1.5 mb-8 shadow-sm hover:border-primary/30 transition-colors cursor-default">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-glow opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-semibold uppercase tracking-wide text-silver-mid">Premium Creative Agency</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                We Design, Edit &amp; Build<br/>
+                Brands That <span class="text-metallic">Command Attention</span>
+</h1>
+<p class="text-lg md:text-xl text-body mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+                Xpertism is your premium on-demand creative agency. We deliver pixel-perfect graphic design and cinematic video editing with a tech-forward approach.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button
+  type="button"
+  data-open-form
+  class="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-neon flex items-center justify-center gap-2 group"
+>
+  Get a Quote
+  <span class="material-icons-round text-lg group-hover:translate-x-1 transition-transform">
+    arrow_forward
+  </span>
+</button>
+<a class="w-full sm:w-auto bg-[#0F1115] hover:bg-[#15171C] text-silver-light border border-white/10 hover:border-white/20 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2" href="#work">
+<span class="material-icons-round text-lg text-silver-dark">grid_view</span>
+                    View Our Work
+                </a>
+</div>
+</section>
+<div class="relative w-full max-w-6xl mx-auto h-[500px] hidden lg:block perspective-1000 mb-12">
+<svg class="absolute inset-0 w-full h-full pointer-events-none stroke-white/10" style="stroke-dasharray: 6 6;">
+<path d="M 250 200 C 350 200, 400 300, 500 300" fill="none" stroke-width="1"></path>
+<path d="M 900 200 C 800 200, 750 300, 640 300" fill="none" stroke-width="1"></path>
+<path d="M 900 500 C 800 500, 700 400, 600 340" fill="none" stroke-width="1"></path>
+<path d="M 250 500 C 350 500, 450 400, 540 340" fill="none" stroke-width="1"></path>
+<line stroke-width="1" x1="570" x2="570" y1="360" y2="600"></line>
+</svg>
+<div class="absolute top-[280px] left-1/2 -translate-x-1/2 z-20">
+<div class="bg-[#0F1115] border border-primary/30 text-white px-8 py-4 rounded-xl shadow-neon flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+<span class="material-icons-round text-primary">hub</span>
+<span class="font-bold tracking-wide">Creative Hub</span>
+</div>
+</div>
+<div class="absolute top-20 left-10 w-80 bg-[#0F1115] rounded-xl p-6 shadow-card border border-white/5 hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 group">
+<div class="flex justify-between items-center mb-6">
+<span class="text-xs font-semibold text-silver-dark uppercase tracking-wider">Avg. Retention</span>
+<span class="material-icons-round text-silver-dark group-hover:text-primary transition-colors">insights</span>
+</div>
+<div class="flex items-center justify-between mb-4 opacity-40">
+<div>
+<div class="text-2xl font-bold text-silver-dark">12<span class="text-sm">%</span></div>
+<div class="text-xs text-silver-dark">Without Edits</div>
+</div>
+<div class="w-10 h-5 bg-white/10 rounded-full relative">
+<div class="absolute left-1 top-1 w-3 h-3 bg-white/30 rounded-full"></div>
+</div>
+</div>
+<div class="w-full h-px bg-white/5 mb-4"></div>
+<div class="flex items-center justify-between">
+<div>
+<div class="text-3xl font-bold text-primary text-glow">85<span class="text-sm align-top">%</span></div>
+<div class="text-xs font-medium text-silver-light">With Xpertism</div>
+</div>
+<div class="w-10 h-5 bg-primary/20 rounded-full relative border border-primary/30">
+<div class="absolute right-1 top-1 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_rgba(31,123,255,0.8)]"></div>
+</div>
+</div>
+</div>
+<div class="absolute top-20 right-10 w-72 bg-[#0F1115] rounded-xl p-6 shadow-card border border-white/5 hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-icons-round text-primary text-sm">verified_user</span>
+<span class="text-sm font-semibold text-silver-light">Quality Assurance</span>
+</div>
+<div class="relative bg-black rounded-lg p-4 mt-4 overflow-hidden group">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjEiIGN5PSIxIiByPSIxIiBmaWxsPSIjQzRCNTlCIiBmaWxsLW9wYWNpdHk9IjAuMiIvPjwvc3ZnPg==')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+<div class="relative z-10 flex flex-col items-center py-4">
+<div class="w-12 h-12 bg-primary/20 border border-primary/50 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(31,123,255,0.2)] mb-3 group-hover:scale-110 transition-transform">
+<span class="material-icons-round text-primary">check</span>
+</div>
+<div class="text-sm font-bold text-white">Render Complete</div>
+<div class="text-xs text-silver-dark">4K Ultra HD Exported</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="py-24 bg-[#0B0B0B] border-t border-white/5 relative z-10" id="services">
+<div class="container mx-auto px-4 max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">What We Do</h2>
+<p class="text-body max-w-2xl mx-auto">We handle the heavy lifting so you can focus on your vision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="group p-8 rounded-2xl bg-[#0F1115] hover:bg-[#15171C] border border-white/5 hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary group-hover:shadow-neon transition-all duration-300">
+<span class="material-icons-round text-3xl">movie_filter</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Video Editing &amp; Post-Production</h3>
+<p class="text-body leading-relaxed text-sm">Professional cuts, sound design, color grading, and motion graphics for long-form content.</p>
+</div>
+<div class="group p-8 rounded-2xl bg-[#0F1115] hover:bg-[#15171C] border border-white/5 hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary group-hover:shadow-neon transition-all duration-300">
+<span class="material-icons-round text-3xl">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Includes:</h3>
+<p class="text-body leading-relaxed text-sm">
+• Long-form video editing (YouTube, podcasts) <br>
+• Short-form content (Reels, Shorts, TikTok)<br>
+• Motion graphics, captions & sound design<br>
+• Color grading and final delivery optimization</p>
+</div>
+<div class="group p-8 rounded-2xl bg-[#0F1115] hover:bg-[#15171C] border border-white/5 hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary group-hover:shadow-neon transition-all duration-300">
+<span class="material-icons-round text-3xl">palette</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Graphic Design </h3>
+<p class="text-body leading-relaxed text-sm">Strategic visual design that builds strong, consistent brand identity.</p>
+</div>
+<div class="group p-8 rounded-2xl bg-[#0F1115] hover:bg-[#15171C] border border-white/5 hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:border-primary group-hover:shadow-neon transition-all duration-300">
+<span class="material-icons-round text-3xl">trending_up</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-3">Includes:</h3>
+<p class="text-body leading-relaxed text-sm">
+• Brand identity & visual systems <br>
+• Social media creatives & thumbnails <br>
+• Marketing assets, banners & layouts <br>
+• UI elements and digital graphics</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- Centered wrapper for desktop -->
+  <div class="lg:col-span-3 flex justify-center">
+    
+    <div class="group p-8 mt-6 rounded-2xl bg-[#0F1115] hover:bg-[#15171C]
+                border border-white/5 hover:border-primary/30
+                transition-all duration-300 relative overflow-hidden
+                max-w-md w-full">
+
+      <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+      <div class="w-14 h-14 bg-white/5 border border-white/10 text-white rounded-xl
+                  flex items-center justify-center mb-6
+                  group-hover:bg-primary group-hover:border-primary group-hover:shadow-neon
+                  transition-all duration-300">
+        <span class="material-icons-round text-3xl">campaign</span>
+      </div>
+
+      <h3 class="text-xl font-bold text-white mb-3">
+        Digital Marketing
+      </h3>
+
+      <p class="text-body leading-relaxed text-sm">
+        Data-driven digital marketing that increases reach, engagement, and conversions across platforms.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+<section class="py-24 bg-black border-t border-white/5 relative z-10" id="work">
+<div class="container mx-auto px-4 max-w-7xl">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Work</h2>
+<p class="text-body max-w-xl">We let our results speak for themselves. Here are a few recent highlights.</p>
+</div>
+<div class="flex items-center gap-3">
+
+
+  <!-- Text Link -->
+  <a
+  href="#"
+  class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-5 py-3 rounded-lg transition-all shadow-neon"
+>
+  <span class="material-icons-round text-lg">grid_view</span>
+  View Portfolio
+  <span class="material-icons-round text-lg">arrow_forward</span>
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- CARDS GRID -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+
+  <!-- VIDEO EDITING CARD -->
+  <a
+    href="https://drive.google.com/file/d/1fnjMN4hz9k5ukxaj2rYzH4w9FR-iGX1v/view?usp=drivesdk"
+    class="group block relative rounded-3xl overflow-hidden bg-[#0F1115] border border-white/10 aspect-[16/10] transition-all hover:border-primary/40 hover:shadow-neon"
+  >
+
+    <!-- VANTA GLOBE -->
+    <div id="vanta-video" class="absolute inset-0 z-0"></div>
+
+    <!-- BLUR GLASS LAYER -->
+    <div class="absolute inset-0 z-[5] backdrop-blur-[2px] bg-black/15"></div>
+
+    <!-- Arrow -->
+    <div class="absolute top-5 right-5 z-20 w-9 h-9 rounded-full bg-white/10 group-hover:bg-primary flex items-center justify-center transition-all">
+      <span class="material-icons-round text-white text-lg">north_east</span>
+    </div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+
+    <!-- Content -->
+    <div class="absolute bottom-0 left-0 w-full p-8 z-20">
+      <span class="inline-flex items-center gap-1 px-3 py-1 bg-primary/20 text-primary-glow text-xs font-bold rounded-full mb-3 border border-primary/30">
+        <span class="material-icons-round text-sm">movie</span>
+        Video Editing
+      </span>
+
+      <h3 class="text-3xl font-bold text-white mb-2">
+        High-Impact Video Editing
+      </h3>
+
+      <p class="text-silver-dark text-sm">
+        Long-form • Short-form • Motion • Thumbnails
+      </p>
+    </div>
+  </a>
+
+  <!-- GRAPHIC DESIGN CARD -->
+  <a
+    href="https://drive.google.com/drive/folders/1Q0tN10I49bC9NlivtD1lj2T4jP2ms00p"
+    class="group block relative rounded-3xl overflow-hidden bg-[#0F1115] border border-white/10 aspect-[16/10] transition-all hover:border-primary/40 hover:shadow-neon"
+  >
+
+    <!-- VANTA RINGS -->
+    <div id="vanta-graphic" class="absolute inset-0 z-0"></div>
+
+    <!-- BLUR GLASS LAYER -->
+    <div class="absolute inset-0 z-[5] backdrop-blur-[2px] bg-black/15"></div>
+
+    <!-- Arrow -->
+    <div class="absolute top-5 right-5 z-20 w-9 h-9 rounded-full bg-white/10 group-hover:bg-primary flex items-center justify-center transition-all">
+      <span class="material-icons-round text-white text-lg">north_east</span>
+    </div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+
+    <!-- Content -->
+    <div class="absolute bottom-0 left-0 w-full p-8 z-20">
+      <span class="inline-flex items-center gap-1 px-3 py-1 bg-primary/20 text-primary-glow text-xs font-bold rounded-full mb-3 border border-primary/30">
+        <span class="material-icons-round text-sm">palette</span>
+        Graphic Design
+      </span>
+
+      <h3 class="text-3xl font-bold text-white mb-2">
+        High-End Graphic Design
+      </h3>
+
+      <p class="text-silver-dark text-sm">
+        Branding • Social Media • UI • Marketing
+      </p>
+    </div>
+  </a>
+
+</div>
+</section>
+<section class="py-24 bg-[#0B0B0B] border-t border-white/5 relative z-10">
+<div class="container mx-auto px-4 max-w-7xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
+<p class="text-body max-w-2xl mx-auto">A streamlined workflow designed for efficiency and quality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 z-0"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-[#0F1115] border border-white/10 flex items-center justify-center mb-6 shadow-card group hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-3xl text-silver-light">search</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Discovery</h3>
+<p class="text-sm text-silver-dark">We learn about your brand, goals, and target audience.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-[#0F1115] border border-white/10 flex items-center justify-center mb-6 shadow-card group hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-3xl text-silver-light">lightbulb</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Strategy</h3>
+<p class="text-sm text-silver-dark">We plan the content and creative direction for maximum impact.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-[#0F1115] border border-white/10 flex items-center justify-center mb-6 shadow-card group hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-3xl text-silver-light">brush</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Creation</h3>
+<p class="text-sm text-silver-dark">Our designers and editors bring the vision to life.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-[#0F1115] border border-white/10 flex items-center justify-center mb-6 shadow-card group hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-3xl text-silver-light">tune</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Refinement</h3>
+<p class="text-sm text-silver-dark">We polish the work based on your feedback.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-[#0F1115] border border-white/10 flex items-center justify-center mb-6 shadow-card group hover:border-primary/50 transition-colors">
+<span class="material-icons-round text-3xl text-primary">rocket_launch</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Delivery</h3>
+<p class="text-sm text-silver-dark">Final assets delivered on time, ready to publish.</p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button
+  id="startProjectBtn"
+  class="bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-3 rounded-xl transition-all shadow-neon flex items-center justify-center gap-2 w-fit mx-auto group"
+>
+  <span class="material-icons-round text-lg group-hover:rotate-90 transition-transform">
+    add
+  </span>
+  Start a Project
+</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-black border-t border-white/5 relative z-10">
+<div class="container mx-auto px-4 max-w-7xl">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="bg-[#0F1115] p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all">
+<span class="material-icons-round text-primary mb-4 text-2xl">psychology</span>
+<h3 class="font-bold text-white mb-2">Strategy First</h3>
+<p class="text-xs text-silver-dark leading-relaxed">We don't just make things look good; we make them work for your goals.</p>
+</div>
+<div class="bg-[#0F1115] p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all">
+<span class="material-icons-round text-primary mb-4 text-2xl">diamond</span>
+<h3 class="font-bold text-white mb-2">Premium Quality</h3>
+<p class="text-xs text-silver-dark leading-relaxed">Top-tier aesthetic standards for brands that want to stand out.</p>
+</div>
+<div class="bg-[#0F1115] p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all">
+<span class="material-icons-round text-primary mb-4 text-2xl">speed</span>
+<h3 class="font-bold text-white mb-2">Fast Turnaround</h3>
+<p class="text-xs text-silver-dark leading-relaxed">Efficient workflows ensuring you never miss a posting schedule.</p>
+</div>
+<div class="bg-[#0F1115] p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all">
+<span class="material-icons-round text-primary mb-4 text-2xl">person_add</span>
+<h3 class="font-bold text-white mb-2">Creator-Focused</h3>
+<p class="text-xs text-silver-dark leading-relaxed">Tailored specifically for modern digital content creators.</p>
+</div>
+<div class="bg-[#0F1115] p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-all">
+<span class="material-icons-round text-primary mb-4 text-2xl">all_inclusive</span>
+<h3 class="font-bold text-white mb-2">Long-Term Thinking</h3>
+<p class="text-xs text-silver-dark leading-relaxed">We build partnerships designed for sustainable growth.</p>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="text-white hover:text-primary transition-colors font-semibold border-b border-primary/50 pb-0.5" href="#contact">Work With Us</a>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#0B0B0B] border-t border-white/5 relative z-10" id="team">
+<div class="container mx-auto px-4 max-w-4xl">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Team</h2>
+<p class="text-body max-w-2xl mx-auto">The creative minds behind the pixels.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-[#0F1115] p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center hover:shadow-card transition-all">
+<div class="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full mb-6 border-2 border-primary/30 flex items-center justify-center">
+<span class="material-icons-round text-4xl text-silver-dark">person</span>
+</div>
+<h3 class="text-xl font-bold text-white">Somnath Sardar</h3>
+<p class="text-primary text-sm font-medium mb-4">Founder & Video Editor</p>
+<p class="text-body text-sm">I’m a video editor with 2+ years of experience, focused on creating clean, engaging, and high-impact videos for creators and brands. I specialize in storytelling, pacing, and edits that keep audiences watching and help brands grow.</p>
+</div>
+<div class="bg-[#0F1115] p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center hover:shadow-card transition-all">
+<div class="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full mb-6 border-2 border-primary/30 flex items-center justify-center">
+<span class="material-icons-round text-4xl text-silver-dark">person</span>
+</div>
+<h3 class="text-xl font-bold text-white">Soumik Mondal</h3>
+<p class="text-primary text-sm font-medium mb-4">Graphic Designer</p>
+<p class="text-body text-sm">I’m a graphic designer with 1.5 years of experience, specializing in visually strong, modern designs that help brands and creators stand out across digital platforms.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="testimonials" class="py-24 bg-black border-t border-white/5 relative z-10 overflow-hidden">
+  <div class="container mx-auto px-4 max-w-7xl">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Trusted by Creators & Brands
+      </h2>
+      <p class="text-body max-w-2xl mx-auto">
+        Real words from people we’ve worked with.
+      </p>
+    </div>
+
+    <!-- Marquee -->
+    <div class="relative">
+      <div class="flex gap-6 marquee">
+
+        <!-- Card -->
+        <div class="testimonial-card">
+  <p class="testimonial-text">
+    “Xpertism elevated our content instantly. The edits feel cinematic and professional.”
+  </p>
+  <div class="testimonial-author">
+    <img
+      src="https://randomuser.me/api/portraits/men/32.jpg"
+      alt="Ayaan Khan"
+      class="w-10 h-10 rounded-full object-cover border border-white/10"
+    />
+    <div>
+      <div class="name">Ayaan Khan</div>
+      <div class="role">Content Creator</div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-card">
+  <p class="testimonial-text">
+    “Brand visuals look premium and consistent everywhere. Exactly what we needed.”
+  </p>
+  <div class="testimonial-author">
+    <img
+      src="https://randomuser.me/api/portraits/men/45.jpg"
+      alt="Rohit Mehra"
+      class="w-10 h-10 rounded-full object-cover border border-white/10"
+    />
+    <div>
+      <div class="name">Rohit Mehra</div>
+      <div class="role">Startup Founder</div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-card">
+  <p class="testimonial-text">
+    “Fast delivery, insane attention to detail, and results that actually convert.”
+  </p>
+  <div class="testimonial-author">
+    <img
+      src="https://randomuser.me/api/portraits/women/65.jpg"
+      alt="Sarah Williams"
+      class="w-10 h-10 rounded-full object-cover border border-white/10"
+    />
+    <div>
+      <div class="name">Sarah Williams</div>
+      <div class="role">Marketing Lead</div>
+    </div>
+  </div>
+</div>
+
+<div class="testimonial-card">
+  <p class="testimonial-text">
+    “Probably the cleanest edits we’ve ever received. 10/10 experience.”
+  </p>
+  <div class="testimonial-author">
+    <img
+      src="https://randomuser.me/api/portraits/men/71.jpg"
+      alt="Daniel Cruz"
+      class="w-10 h-10 rounded-full object-cover border border-white/10"
+    />
+    <div>
+      <div class="name">Daniel Cruz</div>
+      <div class="role">YouTuber</div>
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate for seamless loop -->
+<div class="testimonial-card">
+  <p class="testimonial-text">
+    “Xpertism elevated our content instantly. The edits feel cinematic and professional.”
+  </p>
+  <div class="testimonial-author">
+    <img
+      src="https://randomuser.me/api/portraits/men/32.jpg"
+      alt="Ayaan Khan"
+      class="w-10 h-10 rounded-full object-cover border border-white/10"
+    />
+    <div>
+      <div class="name">Ayaan Khan</div>
+      <div class="role">Content Creator</div>
+    </div>
+  </div>
+</div>
+
+      
+</section>
+<section class="relative z-10 py-20 bg-[#0B0B0B] border-t border-white/5">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      <div>
+        <div class="text-4xl md:text-5xl font-extrabold mb-2 text-metallic">
+          150+
+        </div>
+        <div class="text-sm text-silver-dark uppercase tracking-wide">
+          Projects Delivered
+        </div>
+      </div>
+
+      <div>
+        <div class="text-4xl md:text-5xl font-extrabold mb-2 text-metallic">
+          50+
+        </div>
+        <div class="text-sm text-silver-dark uppercase tracking-wide">
+          Happy Clients
+        </div>
+      </div>
+
+      <div>
+        <div class="text-4xl md:text-5xl font-extrabold mb-2 text-metallic">
+          10M+
+        </div>
+        <div class="text-sm text-silver-dark uppercase tracking-wide">
+          Views Generated
+        </div>
+      </div>
+
+      <div>
+        <div class="text-4xl md:text-5xl font-extrabold mb-2 text-metallic">
+          2.5+
+        </div>
+        <div class="text-sm text-silver-dark uppercase tracking-wide">
+          Years Experience
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-black relative overflow-hidden border-t border-white/5" id="contact">
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/20 rounded-t-full blur-[80px]"></div>
+</div>
+<div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Let’s Build Something Powerful Together</h2>
+<p class="text-lg text-body mb-10 font-light">Join hundreds of creators who trust Xpertism with their brand.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a
+  class="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white font-semibold px-10 py-4 rounded-xl transition-all shadow-neon hover:shadow-[0_0_30px_rgba(31,123,255,0.6)] text-lg cursor-pointer open-floating-form"
+>
+  Get a Quote
+</a>
+<a class="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-10 py-4 rounded-xl transition-all hover:border-primary/50 text-lg" href="#work">
+                    View Our Work
+                </a>
+</div>
+</div>
+</section>
+<footer class="py-12 bg-[#050505] border-t border-white/5 text-sm">
+<div class="container mx-auto px-4 max-w-7xl relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<a class="flex items-center gap-2 group" href="#">
+<div class="flex items-center justify-center">
+  <img
+    src="https://i.ibb.co/q39T98Gr/IMG-20260106-131016.png"
+    alt="Xpertism Logo"
+    class="w-7 h-7 object-contain
+           drop-shadow-[0_0_10px_rgba(31,123,255,0.6)]"
+  />
+</div>
+<span class="font-bold text-lg tracking-tight text-metallic">
+  XPERTISM
+</span>
+</a>
+<p class="text-silver-dark text-sm text-center md:text-left max-w-xs">Premium digital services for modern brands and creators.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-silver-mid">
+<a class="hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-white transition-colors" href="#services">Services</a>
+<a class="hover:text-white transition-colors" href="#work">Our Work</a>
+<a class="hover:text-white transition-colors" href="#team">Our Team</a>
+</div>
+<div class="flex gap-4">
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/xpertism.in?igsh=MWZicGx1cHB3dzFsOA=="
+    aria-label="Instagram"
+    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center
+           text-silver-mid hover:text-white hover:bg-white/10
+           transition-all hover:shadow-[0_0_12px_rgba(31,123,255,0.4)]"
+  >
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5C22 19.55 19.55 22 16.25 22h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2zm0 1.5A4.26 4.26 0 003.5 7.75v8.5A4.26 4.26 0 007.75 20.5h8.5a4.26 4.26 0 004.25-4.25v-8.5a4.26 4.26 0 00-4.25-4.25h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.75-.88a1.13 1.13 0 11-2.26 0 1.13 1.13 0 012.26 0z"/>
+    </svg>
+  </a>
+
+  <!-- Twitter / X -->
+  <a
+    href="#"
+    aria-label="Twitter"
+    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center
+           text-silver-mid hover:text-white hover:bg-white/10
+           transition-all hover:shadow-[0_0_12px_rgba(31,123,255,0.4)]"
+  >
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M22 4.01c-.77.34-1.6.57-2.47.67a4.3 4.3 0 001.88-2.38 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 3.16a4.28 4.28 0 001.32 5.72 4.23 4.23 0 01-1.94-.54v.05a4.28 4.28 0 003.44 4.2 4.3 4.3 0 01-1.93.07 4.28 4.28 0 004 2.97A8.6 8.6 0 012 19.54a12.13 12.13 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57A8.7 8.7 0 0022 4.01z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a
+    href="#"
+    aria-label="LinkedIn"
+    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center
+           text-silver-mid hover:text-white hover:bg-white/10
+           transition-all hover:shadow-[0_0_12px_rgba(31,123,255,0.4)]"
+  >
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/>
+    </svg>
+  </a>
+
+</div>
+</div>
+</footer>
+<!-- Floating CTA Button -->
+<button
+  id="floatingBtn"
+  class="fixed bottom-6 right-6 z-[80] bg-primary hover:bg-primary-dark text-white px-5 py-4 rounded-full shadow-neon flex items-center gap-2 transition-all"
+>
+  <span class="material-icons-round">chat</span>
+  <span class="hidden sm:inline font-semibold">Get a Quote</span>
+</button>
+<!-- Floating Form -->
+<!-- Centered Modal Form -->
+<div
+  id="floatingForm"
+  class="fixed inset-0 z-[90] hidden flex items-center justify-center bg-black/60 backdrop-blur-md"
+>
+  <div class="relative w-[92%] max-w-lg rounded-2xl bg-[#0F1115]/90 backdrop-blur-xl border border-white/10 shadow-card p-6 sm:p-8">
+
+    <!-- Close Button -->
+    <button
+      id="closeFloatingForm"
+      class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white"
+      aria-label="Close form"
+    >
+      <span class="material-icons-round text-xl">close</span>
+    </button>
+
+    <!-- Header -->
+    <h3 class="text-2xl font-bold text-white mb-2 text-center">
+      Start a Project
+    </h3>
+    <p class="text-sm text-silver-mid text-center mb-6">
+      Tell us about your idea and we’ll get back to you.
+    </p>
+
+    <!-- Form -->
+<form
+  action="https://formspree.io/f/YOUR_FORM_ID"
+  method="POST"
+  class="space-y-4"
+>
+
+  <!-- Name -->
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary"
+  />
+
+  <!-- Service -->
+  <select
+    name="service"
+    required
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary"
+  >
+    <option value="" disabled selected>Select Service</option>
+    <option value="Graphic Design">Graphic Design</option>
+    <option value="Video Editing">Video Editing</option>
+    <option value="Digital Marketing">Digital Marketing</option>
+  </select>
+
+  <!-- Agency Name (Optional) -->
+  <input
+    type="text"
+    name="agency"
+    placeholder="Agency / Brand Name (Optional)"
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary"
+  />
+
+  <!-- Budget -->
+  <input
+    type="text"
+    name="budget"
+    placeholder="Budget Range"
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary"
+  />
+
+  <!-- Project Details -->
+  <textarea
+    name="project_details"
+    rows="3"
+    placeholder="Tell us about your project"
+    required
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary resize-none"
+  ></textarea>
+
+  <!-- Phone Number -->
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number (WhatsApp preferred)"
+    required
+    class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary"
+  />
+
+  <!-- Submit -->
+  <button
+    type="submit"
+    class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-lg transition-all shadow-neon"
+  >
+    Submit
+  </button>
+
+  <!-- Helper Text -->
+  <p class="mt-3 text-sm text-silver-mid text-center">
+    We’ll get back to you within <span class="text-white font-medium">24 hours</span>
+  </p>
+<a
+  href="mailto:urxpertism@gmail.com"
+  class="flex items-center justify-center gap-2 text-sm font-medium text-silver-mid hover:text-white transition-colors mx-auto"
+>
+  <span class="material-icons-round text-sm text-primary">mail</span>
+  urxpertism@gmail.com
+</a>
+
+</form>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const floatingBtn = document.getElementById('floatingBtn');
+    const floatingForm = document.getElementById('floatingForm');
+    const closeFloatingForm = document.getElementById('closeFloatingForm');
+
+    floatingBtn.addEventListener('click', () => {
+      floatingForm.classList.remove('hidden');
+      floatingBtn.classList.add('hidden');
+    });
+
+    closeFloatingForm.addEventListener('click', () => {
+      floatingForm.classList.add('hidden');
+      floatingBtn.classList.remove('hidden');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    if (!menuBtn || !mobileMenu || !closeMenu) return;
+
+    const closeMobileMenu = () => {
+      mobileMenu.classList.add('hidden');
+    };
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', closeMobileMenu);
+
+    // 🔥 CLOSE MENU WHEN ANY LINK IS CLICKED
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  });
+</script> 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    if (!menuBtn || !mobileMenu || !closeMenu) return;
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const floatingForm = document.getElementById('floatingForm');
+    const closeFloatingForm = document.getElementById('closeFloatingForm');
+    const floatingBtn = document.getElementById('floatingBtn');
+    const openButtons = document.querySelectorAll('[data-open-form]');
+
+    const openForm = () => {
+      floatingForm.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      if (floatingBtn) floatingBtn.classList.add('hidden');
+    };
+
+    const closeForm = () => {
+      floatingForm.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      if (floatingBtn) floatingBtn.classList.remove('hidden');
+    };
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', openForm);
+    });
+
+    closeFloatingForm.addEventListener('click', closeForm);
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeForm();
+    });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    /* VIDEO EDITING — GLOBE */
+    VANTA.GLOBE({
+      el: "#vanta-video",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      color: 0x1f7bff,
+      color2: 0x4da3ff,
+      backgroundColor: 0x0f1115,
+      size: 0.9
+    });
+
+    /* GRAPHIC DESIGN — BLUE RINGS */
+    VANTA.RINGS({
+      el: "#vanta-graphic",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      color: 0x1f7bff,
+      backgroundColor: 0x0f1115,
+      backgroundAlpha: 0.0,
+      scale: 1.2,
+      scaleMobile: 0.8,
+      speed: 1.3
+    });
+
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.getElementById('startProjectBtn');
+    const floatingForm = document.getElementById('floatingForm');
+    const floatingBtn = document.getElementById('floatingBtn');
+
+    if (!startBtn || !floatingForm) return;
+
+    startBtn.addEventListener('click', () => {
+      floatingForm.classList.remove('hidden');
+      if (floatingBtn) floatingBtn.classList.add('hidden');
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const floatingForm = document.getElementById('floatingForm');
+    const floatingBtn = document.getElementById('floatingBtn');
+
+    document.querySelectorAll('.open-floating-form').forEach(btn => {
+      btn.addEventListener('click', () => {
+        floatingForm.classList.remove('hidden');
+        if (floatingBtn) floatingBtn.classList.add('hidden');
+      });
+    });
+  });
+</script>
+</body></html>
